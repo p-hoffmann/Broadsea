@@ -111,8 +111,8 @@ services:
     profiles: [ "atlas-from-git" ]
     build: ${ATLAS_GITHUB_URL}
     extends: 
-      file: "./compose/ohdsi-atlas.yml"
-      service: ohdsi-atlas
+      file: "./compose/ohdsi-atlas3.yml"
+      service: ohdsi-atlas3
 
   # -----------------------------------------------------------------
 

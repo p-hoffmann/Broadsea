@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+
+  # Atlas 3 (https://github.com/OHDSI/Atlas3) ships as a Caddy container
+  # serving the built Vue app from /srv/atlas and reading its runtime config
+  # from /srv/atlas/config-local.json. Broadsea replaces the repo Caddyfile
+  # with a plain-HTTP one on port 8080 so the existing traefik service
+  # definition for ohdsi-atlas keeps working unchanged.
+  ohdsi-atlas3:
+    container_name: ohdsi-atlas
+    platform: ${DOCKER_ARCH}
+    restart: unless-stopped
+    ipc: none
+    privileged: false
+    volumes:
+      - ../atlas/config/config-local.json:/srv/atlas/config-local.json:ro
+      - ../atlas/config/Caddyfile:/etc/caddy/Caddyfile:ro
+    labels:
+      - "traefik.enable=true"

@@ -1,0 +1,14 @@
+# Broadsea runs Atlas 3 behind traefik: plain HTTP on 8080 (the port the
+# traefik ohdsi-atlas service points at) instead of the repo default of a
+# TLS site on 80/443. The Atlas3 Caddyfile's internal /WebAPI reverse proxy
+# is dropped too -- traefik already routes /WebAPI to the WebAPI container.
+:8080 {
+	redir / /atlas/ permanent
+	redir /atlas /atlas/ permanent
+
+	handle /atlas/* {
+		root * /srv
+		try_files {path} /atlas/index.html
+		file_server
+	}
+}
