@@ -10,6 +10,7 @@ services:
     read_only: true
     tmpfs:
       - /tmp
+      - /var/lib/ohdsi/webapi/logs
     privileged: false
     volumes:
       - ${WEBAPI_CACERTS_FILE}:/tmp/cacerts
