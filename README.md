@@ -2,6 +2,8 @@
 
 [![default profile](https://github.com/OHDSI/Broadsea/actions/workflows/default.yml/badge.svg?branch=develop)](https://github.com/OHDSI/Broadsea/actions/workflows/default.yml) [![perseus profile](https://github.com/OHDSI/Broadsea/actions/workflows/perseus.yml/badge.svg?branch=develop)](https://github.com/OHDSI/Broadsea/actions/workflows/perseus.yml) [![openldap profile](https://github.com/OHDSI/Broadsea/actions/workflows/openldap.yml/badge.svg?branch=develop)](https://github.com/OHDSI/Broadsea/actions/workflows/openldap.yml) [![solr-vocab Profile](https://github.com/OHDSI/Broadsea/actions/workflows/solr-vocab.yml/badge.svg?branch=develop)](https://github.com/OHDSI/Broadsea/actions/workflows/solr-vocab.yml) [![achilles Profile](https://github.com/OHDSI/Broadsea/actions/workflows/achilles.yml/badge.svg?branch=develop)](https://github.com/OHDSI/Broadsea/actions/workflows/achilles.yml)
 
+> Trying Atlas 3 and WebAPI 3.0? See [ATLAS3_WEBAPI3.md](ATLAS3_WEBAPI3.md) for a quick start and what changed from WebAPI 2.x.
+
 ## Contents
 
 - [Introduction](#introduction)
